@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tính </title>
+</head>
+<body>
+<h2>Calculator</h2>
+<input type="number" id="o1"> <input type="number" id="o2"><br><br>
+<button onclick="cong()">cộng</button>
+<button onclick="tru()">Trừ</button>
+<button onclick="nhan()">Nhân</button>
+<button onclick="chia()">Chia</button>
+
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function cong() {
+        let a1 = parseInt(document.getElementById("o1").value);
+        let b1 = parseInt(document.getElementById("o2").value);
+        let sum1 = a1 + b1;
+        document.getElementById("result").innerHTML = "ket qua : " + sum1;
+    }
+    function tru() {
+        let a2 = parseInt(document.getElementById("o1").value);
+        let b2 = parseInt(document.getElementById("o2").value);
+        let sum2 = a2 - b2;
+        document.getElementById("result").innerHTML = "ket qua : " + sum2;
+    }
+    function nhan() {
+        let a3 = parseInt(document.getElementById("o1").value);
+        let b3 = parseInt(document.getElementById("o2").value);
+        let sum3 = a3*b3;
+        document.getElementById("result").innerHTML = "ket qua : " + sum3;
+    }
+    function chia() {
+        let a4 = parseInt(document.getElementById("o1").value);
+        let b4 = parseInt(document.getElementById("o2").value);
+        let sum4 = a4/b4;
+        document.getElementById("result").innerHTML = "ket qua : " + sum4;
+    }
+</script>

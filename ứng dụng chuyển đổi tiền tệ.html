@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    Amount <input type="text" id="nhaptien"> from
+    <select id="cot1">
+        <option value="23000">VND</option>
+        <option value="1">USD</option>
+    </select>
+    To <select id="cot2">
+    <option value="1">USD</option>
+    <option value="23000">VND</option>
+</select>
+    <input type="button" value="convert" onclick="doitiente()"><br>
+    <p id="result"></p>
+</form>
+</body>
+</html>
+<script>
+    function doitiente() {
+        let nhaptien = document.getElementById("nhaptien").value;
+        let cot1 = document.getElementById("cot1").value;
+        let cot2 = document.getElementById("cot2").value;
+        let result = nhaptien * cot2/cot1;
+        document.getElementById("result").innerHTML = "So tien can doi = " + result;
+
+    }
+</script>

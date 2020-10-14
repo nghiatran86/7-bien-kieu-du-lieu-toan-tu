@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<form>
+    <br>
+    <br>
+    <br>
+    Amount <input type="text" id="aMount"> From Currency
+    <select id="fromCur">
+        <option value="23000">Viet Nam Dong</option>
+        <option value="1">USD</option>
+    </select>
+    To Currency <select id="toCur">
+    <option value="1">USD</option>
+    <option value="23000">VND</option>
+</select>
+    <input type="button" value="Convert" onclick="clickToConvert()">
+</form>
+
+
+<script>
+
+
+    function clickToConvert()
+    {
+        let aMount = document.getElementById("aMount").value;
+        let toCur = document.getElementById("toCur").value;
+        let fromCur = document.getElementById("fromCur").value;
+        let results = aMount * toCur / fromCur;
+        document.getElementById("result").innerHTML = "So tien doi la: " + results;
+    }
+
+
+</script>
+
+</body>
+</html>
